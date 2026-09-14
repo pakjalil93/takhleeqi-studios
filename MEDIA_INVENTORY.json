@@ -1,0 +1,154 @@
+{
+  "source": "MOCKUP",
+  "type": "PNG",
+  "dimensions": [
+    1024,
+    1536
+  ],
+  "sha256": "77b9caba888c3d888280b9fc5db22c6d6931588c59bc12dbb606b67916bd14f7",
+  "originalPreserved": true,
+  "provenance": "User-supplied approved design reference. Extracted artwork is illustrative concept material, not verified studio work. No external images downloaded and no AI image generation called.",
+  "selected": [
+    {
+      "name": "animation",
+      "left": 16,
+      "top": 868,
+      "width": 325,
+      "height": 127,
+      "description": "Supplied concept artwork: animated young character watching a luminous butterfly."
+    },
+    {
+      "name": "mapping",
+      "left": 360,
+      "top": 869,
+      "width": 306,
+      "height": 125,
+      "description": "Supplied concept artwork: cobalt projection patterns on an architectural facade."
+    },
+    {
+      "name": "virtual",
+      "left": 681,
+      "top": 868,
+      "width": 330,
+      "height": 128,
+      "description": "Supplied concept artwork: a virtual production stage with a mountain landscape."
+    },
+    {
+      "name": "product",
+      "left": 96,
+      "top": 655,
+      "width": 261,
+      "height": 93,
+      "description": "Supplied concept artwork: dark headphones in a blue-lit landscape."
+    },
+    {
+      "name": "immersive",
+      "left": 747,
+      "top": 495,
+      "width": 235,
+      "height": 86,
+      "description": "Supplied concept artwork: a VR headset and luminous underwater imagery."
+    },
+    {
+      "name": "film",
+      "left": 719,
+      "top": 656,
+      "width": 262,
+      "height": 94,
+      "description": "Supplied concept artwork: camera crew silhouetted against a cinematic backdrop."
+    }
+  ],
+  "missing": [
+    "Original project photographs and video",
+    "Verified showreel",
+    "Contact details and social URLs",
+    "Genuine testimonials and metrics"
+  ],
+  "originalWebsiteGraphics": [
+    "Supplied Takhleeqi logo traced and extruded with Three.js holographic materials, particles and orbital paths",
+    "Original geometric T header monogram"
+  ],
+  "duplicates": [],
+  "heroLogo": "assets/logo-provenance.json",
+  "wireframeReference": "assets/source/wireframe-style-reference.png",
+  "activeArtwork": {
+    "generator": "Built-in image_gen",
+    "created": "2026-09-14",
+    "provenance": "Original AI-generated illustrative service and concept artwork. Not verified client work or photographs of the actual studio. Earlier mockup artwork and source files preserved.",
+    "prompts": "assets/generated/prompts.json",
+    "images": [
+      {
+        "name": "animation",
+        "source": "assets/generated/animation.png",
+        "width": 1536,
+        "height": 1024,
+        "sha256": "a9bb020aec33350ae86176803364a54b50c4aa481c5e30c42dd74b182f278db1",
+        "outputs": [
+          "public/media/creative-animation-480.webp",
+          "public/media/creative-animation-960.webp",
+          "public/media/creative-animation-1536.webp"
+        ]
+      },
+      {
+        "name": "mapping",
+        "source": "assets/generated/mapping.png",
+        "width": 1536,
+        "height": 1024,
+        "sha256": "6b703d81c5bf754bf0695c33daeb022845b8949400f933e82e4a0d6b8c33ee88",
+        "outputs": [
+          "public/media/creative-mapping-480.webp",
+          "public/media/creative-mapping-960.webp",
+          "public/media/creative-mapping-1536.webp"
+        ]
+      },
+      {
+        "name": "immersive",
+        "source": "assets/generated/immersive.png",
+        "width": 1536,
+        "height": 1024,
+        "sha256": "20c6ebfc718f3225313309c89741948ff950da1773656f388d772abb6efaefca",
+        "outputs": [
+          "public/media/creative-immersive-480.webp",
+          "public/media/creative-immersive-960.webp",
+          "public/media/creative-immersive-1536.webp"
+        ]
+      },
+      {
+        "name": "product",
+        "source": "assets/generated/product.png",
+        "width": 1536,
+        "height": 1024,
+        "sha256": "53cf94031355b69a549989934e905a82d00c477295743ebb70412ea772821d71",
+        "outputs": [
+          "public/media/creative-product-480.webp",
+          "public/media/creative-product-960.webp",
+          "public/media/creative-product-1536.webp"
+        ]
+      },
+      {
+        "name": "virtual",
+        "source": "assets/generated/virtual.png",
+        "width": 1536,
+        "height": 1024,
+        "sha256": "06e7d2005f68a891e187506ba47e41f4f3e64b6a434a76a76f218ddaa611b4b2",
+        "outputs": [
+          "public/media/creative-virtual-480.webp",
+          "public/media/creative-virtual-960.webp",
+          "public/media/creative-virtual-1536.webp"
+        ]
+      },
+      {
+        "name": "film",
+        "source": "assets/generated/film.png",
+        "width": 1536,
+        "height": 1024,
+        "sha256": "2437f27d1b81c8257a7ad6c240cb3a67918de27dcbb69be1fe6f0ca3d44a0860",
+        "outputs": [
+          "public/media/creative-film-480.webp",
+          "public/media/creative-film-960.webp",
+          "public/media/creative-film-1536.webp"
+        ]
+      }
+    ]
+  }
+}

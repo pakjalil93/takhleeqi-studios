@@ -1,0 +1,6 @@
+packages:
+  - .
+storeDir: F:/ASTRA_WEBISTE_DEV/.cache/pnpm-store
+cacheDir: F:/ASTRA_WEBISTE_DEV/.cache/pnpm-cache
+stateDir: F:/ASTRA_WEBISTE_DEV/.cache/pnpm-state
+managePackageManagerVersions: false

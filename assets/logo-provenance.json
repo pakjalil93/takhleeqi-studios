@@ -1,0 +1,12 @@
+{
+  "source": "assets/source/takhleeqi-logo-original.png",
+  "sha256": "0c30ce440642e1c180ec99798f066757fb78590b3f7816a0df2d1a3c3f368b0e",
+  "imageSize": [
+    249,
+    238
+  ],
+  "shapeCount": 8,
+  "holeCount": 1,
+  "silhouetteIntersectionOverUnion": 0.9995382613440793,
+  "method": "Threshold contour trace with 0.6-pixel simplification. Original mark, dots and negative spaces preserved; no AI raster generation. 3D edges receive local rounding up to 1.1 source pixels."
+}
