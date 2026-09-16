@@ -16,7 +16,6 @@ import {
   Plus,
   X,
   Menu,
-  MoveUpRight,
   AudioLines,
   Orbit,
   Layers,
@@ -26,7 +25,13 @@ import {
 } from "lucide-react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { services, projects, steps } from "./content";
+import { services, steps } from "./content";
+import {
+  WorkGallery,
+  TeamSection,
+  ClientsSection,
+  workProjects as projects,
+} from "./WorkGallery";
 const HeroScene = lazy(() => import("./HeroScene"));
 gsap.registerPlugin(ScrollTrigger);
 const icons = {
@@ -53,15 +58,13 @@ function Icon({
 }
 function Mark() {
   return (
-    <svg
-      className="mark"
-      viewBox="0 0 40 40"
-      fill="currentColor"
-      aria-hidden="true"
-    >
-      <path d="M2 4h36v8H23v26h-8V12H2z" />
-      <path d="M2 16h8v8H2z" opacity=".6" />
-    </svg>
+    <img
+      className="mark brand-logo"
+      src="media/takhleeqi-brand.png"
+      alt=""
+      width="151"
+      height="157"
+    />
   );
 }
 function Picture({
@@ -458,8 +461,9 @@ export default function App() {
           id="main-navigation"
         >
           {[
-            ["Work", "work"],
+            ["Our Work", "work"],
             ["Services", "services"],
+            ["Our Team", "team"],
             ["Studio", "studio"],
             ["Contact", "contact"],
           ].map(([label, id]) => (
@@ -486,7 +490,9 @@ export default function App() {
         {[
           ["home", "Home"],
           ["services", "Services"],
-          ["work", "Work"],
+          ["work", "Our Work"],
+          ["team", "Our Team"],
+          ["clients", "Our Clients"],
           ["studio", "Studio"],
           ["contact", "Contact"],
         ].map(([id, label], i) => (
@@ -660,46 +666,12 @@ export default function App() {
             <span>Original artwork · Illustrative concepts</span>
           </div>
         </section>
-        <section
-          className="section work"
-          id="work"
-          aria-labelledby="work-heading"
-        >
-          <div className="section-heading reveal">
-            <div>
-              <span className="eyebrow">02 / A WORLD OF POSSIBILITY</span>
-              <h2 id="work-heading">
-                Selected <em>experiences.</em>
-              </h2>
-            </div>
-            <span className="quiet-label">
-              A GLIMPSE OF WHAT COULD BE <MoveUpRight size={17} />
-            </span>
-          </div>
-          <div className="work-grid card-grid">
-            {projects.map((project, i) => (
-              <button
-                className="work-card"
-                key={project.title}
-                onClick={() => setModal({ type: "project", index: i })}
-                aria-label={`View concept study: ${project.title}`}
-              >
-                <div className="work-visual">
-                  <Picture name={project.image} alt={project.description} />
-                  <span className="concept-tag">CONCEPT STUDY</span>
-                  <span className="work-open">
-                    <ArrowUpRight size={27} />
-                  </span>
-                </div>
-                <div className="work-meta">
-                  <span>{project.category}</span>
-                  <span>0{i + 1}</span>
-                </div>
-                <h3>{project.title}</h3>
-              </button>
-            ))}
-          </div>
-        </section>
+        <WorkGallery
+          motion={motion && !modal}
+          onSelect={(index) => setModal({ type: "project", index })}
+        />
+        <TeamSection />
+        <ClientsSection motion={motion && !modal} />
         <div
           className="kinetic"
           aria-label="Characters. Worlds. Stories. Experiences."
@@ -716,7 +688,7 @@ export default function App() {
           aria-labelledby="studio-heading"
         >
           <div className="studio-intro reveal">
-            <span className="eyebrow">03 / THE STUDIO MINDSET</span>
+            <span className="eyebrow">05 / THE STUDIO MINDSET</span>
             <div>
               <h2>
                 Curiosity at our core.
@@ -835,7 +807,7 @@ export default function App() {
           <span>© {new Date().getFullYear()} Takhleeqi Studios</span>
           <span>CREATIVE THINKING. EXTRAORDINARY MAKING.</span>
           <div>
-            <a href="#work">Work</a>
+            <a href="#work">Our Work</a>
             <a href="#services">Services</a>
             <button onClick={openContact}>
               Let’s talk <ArrowUpRight size={12} />
@@ -854,11 +826,35 @@ export default function App() {
         >
           {modal.type === "contact" ? (
             <BriefForm />
+          ) : selectedProject ? (
+            <>
+              <div className="video-frame">
+                <iframe
+                  src={`https://www.youtube-nocookie.com/embed/${selectedProject.id}?rel=0`}
+                  title={selectedProject.title}
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  allowFullScreen
+                  referrerPolicy="strict-origin-when-cross-origin"
+                />
+              </div>
+              <div className="dialog-body">
+                <span className="eyebrow">{selectedProject.category}</span>
+                <h2>{selectedProject.title}</h2>
+                <a
+                  className="button primary"
+                  href={selectedProject.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Watch on YouTube <ArrowUpRight size={17} />
+                </a>
+              </div>
+            </>
           ) : (
             <>
               <Picture
-                name={(selectedService || selectedProject)!.image}
-                alt={`Original concept artwork for ${(selectedService || selectedProject)!.title}`}
+                name={selectedService!.image}
+                alt={`Original concept artwork for ${selectedService!.title}`}
                 className="dialog-image"
               />
               <div className="dialog-body">
@@ -867,23 +863,16 @@ export default function App() {
                     ? "CREATIVE CAPABILITY"
                     : "ILLUSTRATIVE CONCEPT STUDY"}
                 </span>
-                <h2>{(selectedService || selectedProject)!.title}</h2>
-                {selectedService ? (
-                  selectedService.details.map((d) => (
-                    <div key={d.title} className="detail">
-                      <h3>
-                        <Plus size={15} />
-                        {d.title}
-                      </h3>
-                      <p>{d.text}</p>
-                    </div>
-                  ))
-                ) : (
-                  <>
-                    <p>{selectedProject!.description}</p>
-                    <p className="project-scope">{selectedProject!.scope}</p>
-                  </>
-                )}
+                <h2>{selectedService!.title}</h2>
+                {selectedService!.details.map((d) => (
+                  <div key={d.title} className="detail">
+                    <h3>
+                      <Plus size={15} />
+                      {d.title}
+                    </h3>
+                    <p>{d.text}</p>
+                  </div>
+                ))}
                 <p className="provenance">
                   Original AI-generated concept imagery illustrating creative
                   direction, not a completed client commission.

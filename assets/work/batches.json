@@ -1,0 +1,97 @@
+[
+  {
+    "file": "assets/work/reference-board-1.png",
+    "projects": [
+      {
+        "id": "gI9_NmugF2E",
+        "title": "Kalim Siddiqui — A Conversation",
+        "category": "CINEMATIC INTERVIEW"
+      },
+      {
+        "id": "pUcVhmC5jRY",
+        "title": "Interwood — The Recliner",
+        "category": "PRODUCT FILM"
+      },
+      {
+        "id": "w9faKG4TxqE",
+        "title": "Interwood — Furniture in Focus",
+        "category": "PRODUCT FILM"
+      },
+      {
+        "id": "y7jI5ovXGEs",
+        "title": "Atlantis Towers",
+        "category": "ARCHITECTURAL VISUALIZATION"
+      }
+    ]
+  },
+  {
+    "file": "assets/work/reference-board-2.png",
+    "projects": [
+      {
+        "id": "JIV9O8kKSH8",
+        "title": "I-Mobile — Product Film 01",
+        "category": "PRODUCT VISUALIZATION"
+      },
+      {
+        "id": "RuyFlKGc4F4",
+        "title": "I-Mobile — Product Film 02",
+        "category": "PRODUCT VISUALIZATION"
+      },
+      {
+        "id": "FZCDjcarSwI",
+        "title": "Glod Street",
+        "category": "PRODUCT VISUALIZATION"
+      },
+      {
+        "id": "W5IRhMphQAY",
+        "title": "COVID Policy Formation",
+        "category": "INFOGRAPHICS"
+      }
+    ]
+  },
+  {
+    "file": "assets/work/reference-board-3.png",
+    "projects": [
+      {
+        "id": "J48KUxQ0wBo",
+        "title": "CCP",
+        "category": "2D ANIMATION"
+      },
+      {
+        "id": "7ppMfJZds-E",
+        "title": "Safari View Heights — Elevation Reveal",
+        "category": "ARCHITECTURAL VISUALIZATION"
+      },
+      {
+        "id": "xW3PpmESYa8",
+        "title": "Safari View Heights",
+        "category": "ARCHITECTURAL VISUALIZATION"
+      },
+      {
+        "id": "aFctmGQfWTQ",
+        "title": "Spaces & Structures — Project Reel",
+        "category": "ARCHITECTURAL VISUALIZATION"
+      }
+    ]
+  },
+  {
+    "file": "assets/work/reference-board-4.png",
+    "projects": [
+      {
+        "id": "05RbZEaEAhg",
+        "title": "5 Towers",
+        "category": "ARCHITECTURAL VISUALIZATION"
+      },
+      {
+        "id": "ikgotXduz2Q",
+        "title": "Takhleeqi — Editing Reel",
+        "category": "EDITING & POST-PRODUCTION"
+      },
+      {
+        "id": "tGMARjTmvwE",
+        "title": "Pakistan — A Land to Know",
+        "category": "TYPOGRAPHY"
+      }
+    ]
+  }
+]

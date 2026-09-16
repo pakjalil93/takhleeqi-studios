@@ -1,0 +1,47 @@
+{
+  "source": "Clients.pdf, embedded images",
+  "geminiReview": "Gemini cleanup rejected: altered symbols, colors and raster checkerboard instead of alpha.",
+  "method": "Original raster lettering and symbols, estimated background matte removal. No generative redraw.",
+  "logos": [
+    {
+      "id": "interwood",
+      "source": "originals/1-1-X5.png",
+      "output": "media/clients/interwood.png"
+    },
+    {
+      "id": "atlantis",
+      "source": "originals/1-2-X7.png",
+      "output": "media/clients/atlantis.png"
+    },
+    {
+      "id": "imobile",
+      "source": "originals/2-1-X10.png",
+      "output": "media/clients/imobile.png"
+    },
+    {
+      "id": "hoola",
+      "source": "originals/2-2-X11.png",
+      "output": "media/clients/hoola.png"
+    },
+    {
+      "id": "pildat",
+      "source": "originals/2-3-X13.png",
+      "output": "media/clients/pildat.png"
+    },
+    {
+      "id": "bluearc",
+      "source": "originals/3-1-X16.png",
+      "output": "media/clients/bluearc.png"
+    },
+    {
+      "id": "5towers",
+      "source": "originals/4-1-X19.png",
+      "output": "media/clients/5towers.png"
+    },
+    {
+      "id": "zk",
+      "source": "originals/4-2-X20.png",
+      "output": "media/clients/zk.png"
+    }
+  ]
+}

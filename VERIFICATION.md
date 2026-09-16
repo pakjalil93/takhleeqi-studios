@@ -60,3 +60,20 @@ Wireframe mobile follow-up: 390px viewport renders the reduced-detail 3D wirefra
 - The connector now passes through all four icon centres; a persistent subtle track remains visible while the brighter stroke animates. Fixed numeral widths and a shared responsive grid gap keep the anchors aligned.
 - Desktop 1440px: measured zero horizontal/vertical offset at all four icon centres. Mobile 390px: no horizontal overflow, two-column process layout with connector hidden, service dialog opens correctly. All six desktop service images loaded and browser error log was empty.
 - TypeScript, ESLint and final production build passed. Existing nonfatal hero bundle size advisory remains.
+
+## Our Work and Our Team — 16 September 2026
+Replaced concept cards with 15 verified YouTube projects from the supplied document. Added two opposite-direction seamless carousel rows, edge fades, hover pause, manual browsing, global/reduced-motion support and click-to-open video dialogs with direct YouTube links. Added 10 empty team portrait slots immediately below the gallery and updated navigation.
+
+PEGUSD and Khaira Gali links returned public oEmbed HTTP 401; user agreed to continue with other projects. Original YouTube thumbnails are currently used. Gemini produced the first reference-board enhancement but automatic approval review capacity failures prevented downloads and further generation, even after the user approved a retry. Thumbnail enhancements remain pending; see assets/work/README.md.
+
+TypeScript, ESLint and production build passed. Server-rendered assertions verified 15 unique video mappings, all local thumbnails, 15 non-tabbable duplicate cards, motion states and 10 placeholders. Visual browser QA could not run because the same approval-review capacity error blocked browser actions. Existing hero bundle size advisory remains.
+
+## Brand / team / clients preview checks (16 September 2026)
+- Five loaded team portraits, numeric order and 4:5 displayed dimensions confirmed.
+- Eight client images loaded; image bounds fit cards. Transparent alpha present in PNGs.
+- 390px mobile check: no horizontal page overflow, two columns with fifth portrait centered.
+- Header supplied logo and favicon paths updated; original header image preserved byte-for-byte.
+- Client pause/resume interaction works; work tracks move in opposite directions with no container mask.
+- TypeScript, ESLint, Vite build pass. Existing large hero bundle advisory remains.
+- No publication: awaiting user review of local preview.
+- Final browser check found native lazy loading left some transformed carousel images unloaded. Both work and client carousel images now load eagerly (duplicates share cached URLs), preventing blank cards as they scroll into view. Team portraits remain lazy loaded.

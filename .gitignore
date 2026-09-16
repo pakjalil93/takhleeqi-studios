@@ -7,3 +7,13 @@ dist/
 *.tsbuildinfo
 *.log
 .sites-runtime/
+
+# private/source design inputs kept locally only
+assets/Team_Pictures/
+assets/brand/
+assets/clients/Clients.pdf
+assets/clients/originals/
+assets/clients/reference-board.png
+assets/clients/gemini-cleanup.jpg
+assets/work/references/
+assets/work/reference-board-*.png

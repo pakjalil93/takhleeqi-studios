@@ -28,3 +28,22 @@ Latest refinement: logo contour smoothing and edge antialiasing completed. Share
 - TypeScript, ESLint and final production build passed. Existing nonfatal hero bundle size advisory remains.
 
 GitHub deployment preparation: relative asset paths and Pages workflow added; build, TypeScript and ESLint passed. Git repository initialized on main. GitHub authentication pending for pakjalil93; no remote repository created and nothing published yet.
+
+## Our Work and Our Team — 16 September 2026
+Replaced concept cards with 15 verified YouTube projects from the supplied document. Added two opposite-direction seamless carousel rows, edge fades, hover pause, manual browsing, global/reduced-motion support and click-to-open video dialogs with direct YouTube links. Added 10 empty team portrait slots immediately below the gallery and updated navigation.
+
+PEGUSD and Khaira Gali links returned public oEmbed HTTP 401; user agreed to continue with other projects. Original YouTube thumbnails are currently used. Gemini produced the first reference-board enhancement but automatic approval review capacity failures prevented downloads and further generation, even after the user approved a retry. Thumbnail enhancements remain pending; see assets/work/README.md.
+
+TypeScript, ESLint and production build passed. Server-rendered assertions verified 15 unique video mappings, all local thumbnails, 15 non-tabbable duplicate cards, motion states and 10 placeholders. Visual browser QA could not run because the same approval-review capacity error blocked browser actions. Existing hero bundle size advisory remains.
+
+Publishing was also blocked by automatic approval review (selected model at capacity). Changes remain local and uncommitted; existing GitHub live website is unchanged. Resume Gemini download/generation, visual browser QA, then commit/push after review service recovers.
+
+## 16 September 2026 - Brand, team and clients preview
+- Latest user instruction supersedes the earlier publish request: keep these changes local for review; do not commit/push yet.
+- Header/footer mark uses the supplied logo image unchanged; PNG favicon uses the same artwork.
+- Five original team portraits, ordered 1-5, optimized to matching 4:5 frames. No visible names or empty placeholders. Desktop five columns; mobile two columns and centered final portrait.
+- Eight client logos extracted from all four PDF pages; transparent PNG assets and a single right-to-left looping row after Team, with pause control and reduced-motion support.
+- Gemini was used (conversation 7c644a6c3c8f3bdb), but its output altered brand details and painted a checkerboard. Rejected result retained in assets/clients for provenance; website uses original PDF pixels with local matte removal instead.
+- Our Work fade narrowed to 16-36px static edge overlays. Removed large container mask and animated-card backdrop blur; tracks use compositor transforms.
+- Typecheck, lint and production build pass. Browser verified desktop team/client asset loading, mobile 390px layout without page overflow, pause/resume, and opposite work-row directions. Final flicker perception still benefits from user viewing in their browser/GPU.
+- Preview: http://127.0.0.1:3001/#team. No GitHub push performed.
