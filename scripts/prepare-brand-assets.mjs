@@ -84,6 +84,33 @@ await copyFile(
   "assets/brand/logo-original.png",
   "public/media/takhleeqi-brand.png",
 );
+// Preserve the supplied mark exactly: only its ink becomes white and the
+// original white paper becomes genuine alpha transparency.
+const original = await sharp("assets/brand/logo-original.png")
+  .removeAlpha()
+  .raw()
+  .toBuffer({ resolveWithObject: true });
+const whiteMark = Buffer.alloc(original.info.width * original.info.height * 4);
+for (let i = 0, o = 0; i < original.data.length; i += 3, o += 4) {
+  const luminance =
+    (original.data[i] * 0.2126 +
+      original.data[i + 1] * 0.7152 +
+      original.data[i + 2] * 0.0722) /
+    255;
+  whiteMark[o] = 255;
+  whiteMark[o + 1] = 255;
+  whiteMark[o + 2] = 255;
+  whiteMark[o + 3] = Math.round((1 - luminance) * 255);
+}
+await sharp(whiteMark, {
+  raw: {
+    width: original.info.width,
+    height: original.info.height,
+    channels: 4,
+  },
+})
+  .png()
+  .toFile("public/media/takhleeqi-brand-white.png");
 await sharp("assets/brand/logo-original.png")
   .resize(64, 64, { fit: "contain", background: "#ffffff" })
   .png()

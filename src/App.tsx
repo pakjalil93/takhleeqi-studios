@@ -60,7 +60,7 @@ function Mark() {
   return (
     <img
       className="mark brand-logo"
-      src="media/takhleeqi-brand.png"
+      src="media/takhleeqi-brand-white.png"
       alt=""
       width="151"
       height="157"
@@ -215,7 +215,7 @@ function BriefForm() {
           />
         </label>
         <button className="button primary" type="submit">
-          {saved ? "Download again" : "Download project brief"}
+          {saved ? "Save brief again" : "Let’s Connect"}
           <Download size={17} />
         </button>
         <p className="form-note" role="status">

@@ -1152,8 +1152,10 @@ svg {
 }
 .dialog-image {
   width: 100%;
-  height: 260px;
+  aspect-ratio: 16 / 9;
+  height: auto;
   object-fit: cover;
+  object-position: center center;
   display: block;
 }
 .dialog-body,

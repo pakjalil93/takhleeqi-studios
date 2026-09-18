@@ -64,6 +64,7 @@
 .reel-row {
   overflow: hidden;
   padding: 8px 0 24px;
+  contain: layout paint;
 }
 .reel-track {
   display: flex;
@@ -164,7 +165,6 @@
   flex-shrink: 0;
   color: #90c9f0;
 }
-.reel-row:hover .reel-track,
 .reel-row:focus-within .reel-track {
   animation-play-state: paused;
 }
@@ -356,6 +356,7 @@
   isolation: isolate;
   overflow: hidden;
   margin: 40px -3vw 0;
+  contain: layout paint;
 }
 .client-track {
   display: flex;
@@ -392,9 +393,6 @@
 .client-bluearc,
 .client-5towers {
   background: #09141f;
-}
-.client-window:hover .client-track {
-  animation-play-state: paused;
 }
 .client-paused {
   overflow-x: auto;
