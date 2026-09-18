@@ -20,7 +20,6 @@ import {
   Orbit,
   Layers,
   Play,
-  Download,
   Check,
 } from "lucide-react";
 import gsap from "gsap";
@@ -145,18 +144,13 @@ function Dialog({
 }
 function BriefForm() {
   const [saved, setSaved] = useState(false);
-  function download(event: FormEvent<HTMLFormElement>) {
+  function openEmail(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
     const data = new FormData(event.currentTarget);
-    const body = `TAKHLEEQI STUDIOS — PROJECT BRIEF\n\nName: ${data.get("name")}\nEmail: ${data.get("email")}\nService: ${data.get("service")}\n\nThe idea\n${data.get("idea")}\n\nThis brief was prepared locally. It has not been sent to the studio.`;
-    const url = URL.createObjectURL(
-      new Blob([body], { type: "text/plain;charset=utf-8" }),
-    );
-    const anchor = document.createElement("a");
-    anchor.href = url;
-    anchor.download = "Takhleeqi-project-brief.txt";
-    anchor.click();
-    setTimeout(() => URL.revokeObjectURL(url), 2000);
+    const body = `TAKHLEEQI STUDIOS — PROJECT BRIEF\n\nName: ${data.get("name")}\nEmail: ${data.get("email")}\nService: ${data.get("service")}\n\nThe idea\n${data.get("idea")}`;
+    window.location.href = `mailto:hello@takhleeqistudios.com?subject=${encodeURIComponent(
+      `Project brief — ${data.get("service")}`,
+    )}&body=${encodeURIComponent(body)}`;
     setSaved(true);
   }
   return (
@@ -171,7 +165,7 @@ function BriefForm() {
         Put the first spark into words. Create a project brief you can keep and
         share.
       </p>
-      <form onSubmit={download} onChange={() => setSaved(false)}>
+      <form onSubmit={openEmail} onChange={() => setSaved(false)}>
         <div className="form-row">
           <label>
             Your name
@@ -215,16 +209,16 @@ function BriefForm() {
           />
         </label>
         <button className="button primary" type="submit">
-          {saved ? "Save brief again" : "Let’s Connect"}
-          <Download size={17} />
+          {saved ? "Open email again" : "Let’s Connect"}
+          <Send size={17} />
         </button>
         <p className="form-note" role="status">
           {saved ? (
             <>
-              <Check size={15} /> Your brief is ready. Nothing has been sent.
+              <Check size={15} /> Your email app is ready — press Send to share your brief.
             </>
           ) : (
-            "Your details stay in this form. This downloads a brief; it does not send a message."
+            "Your email app will open with your project brief ready to send."
           )}
         </p>
       </form>
