@@ -1930,7 +1930,7 @@ svg {
     padding: 28px 22px;
   }
   .dialog-image {
-    height: 190px;
+    height: auto;
   }
   .dialog-body h2 {
     font-size: 37px;
